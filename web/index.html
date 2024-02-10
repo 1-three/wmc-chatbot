@@ -55,5 +55,28 @@
       });
     });
   </script>
+  <html>
+  <body>
+    <!-- ... Your HTML and CSS -->
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      const API_KEY = "...";
+
+      const genAI = new GoogleGenerativeAI(API_KEY);
+
+
+      const model = genAI.getGenerativeModel({ model: "WeMace"});
+    </script>
+  </body>
+</html>
 </body>
 </html>
